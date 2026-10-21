@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "flybrain-sort"
+name = "flysort"
 version = "0.1.0"
 description = "A sorting algorithm whose every comparison is decided by a simulation of the complete fruit fly brain connectome"
 readme = "README.md"
@@ -16,6 +16,10 @@ test = ["pytest"]
 
 [project.scripts]
 flybrain-sort = "flybrain_sort.__main__:main"
+flybrain-sort-gui = "flybrain_sort.gui:main"
 
 [tool.setuptools]
 packages = ["flybrain_sort"]
+
+[tool.setuptools.package-data]
+flybrain_sort = ["viewer.html"]
