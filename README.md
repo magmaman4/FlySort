@@ -96,6 +96,27 @@ perfectly sorted**, mean Kendall tau 0.971. The errors were adjacent items
 whose values were close together. A longer `--duration` gives the readout more
 spikes to count and sharpens discrimination.
 
+## Quick start (VS Code or any editor)
+
+1. Open the project folder (the one with `run.py` in it) in VS Code.
+2. Install what FlySort needs. In VS Code's terminal (**Terminal → New Terminal**), run:
+
+   ```bash
+   python -m pip install -e .
+   ```
+
+   On Windows, if `python` isn't found, use `py -m pip install -e .`.
+3. Open `run.py` and press **Run**. The first run downloads about 135 MB of
+   connectome data. Then the fly sorts a demo list, and the viewer opens in
+   your browser.
+
+Run `python run.py 42 7 19 3` to sort your own numbers, or
+`python run.py --text 42 7 19 3` to see the comparisons in the terminal.
+
+Use `run.py`, not the files inside `flybrain_sort/`. Those files are parts of
+a package, and running one on its own fails with `attempted relative import
+with no known parent package`.
+
 ## Usage
 
 ```bash
